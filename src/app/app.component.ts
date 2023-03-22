@@ -45,7 +45,7 @@ export class AppComponent {
     }
   }
 
-  takePokemonName(pokemonName: string){
+  takePokemon(pokemonName: string){
     P.getPokemonByName(pokemonName.toLowerCase()).then(res => {
       this.pokemonImg = res.sprites.other['official-artwork'].front_default
       this.pokemonName = res.name
@@ -61,4 +61,5 @@ export class AppComponent {
       err.response.status == 404 ? this.codeErreur = "Le pokemon n'existe pas ou n'est pas en anglais." : this.codeErreur = "Erreur inconnue";
     })
   }
+  
 }
