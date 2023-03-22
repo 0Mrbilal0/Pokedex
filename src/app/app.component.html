@@ -1,0 +1,8 @@
+<h1> {{ timer }}</h1>
+<h1 (click)="Pause()" id="Button">{{buttonValue}}</h1>
+<h1>{{horloge !== null ? horloge : "quelque chose"}}</h1>
+<input type="text" (keyup.enter)="takePokemonName(input.value)" placeholder="Nom de pokemon" #input>
+<h1> {{ pokemonName || codeErreur }} </h1>
+
+<img src="{{pokemonImg}}">
+<!-- <input type="button" (click)="Soustraction()" value="-1"> -->
