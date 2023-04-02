@@ -1,11 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
-body{
-    background-color: black;
-    color: aliceblue;
-}
-
-#Button{
-    cursor: pointer;
-    width: min-content;
+* {
+    box-shadow: 0 0 0 3px red;
+    inset: initial;
 }

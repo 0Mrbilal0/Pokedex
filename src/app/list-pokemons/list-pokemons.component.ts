@@ -3,12 +3,12 @@ import Pokedex from 'pokedex-promise-v2';
 const P = new Pokedex();
 
 @Component({
-  selector: 'app-root',
-  templateUrl: `app.component.html`,
+  selector: 'app-list-pokemons',
+  templateUrl: './list-pokemons.component.html',
 })
 
-export class AppComponent implements OnInit {
-  constructor(){}
+export class ListPokemonsComponent implements OnInit {
+  constructor() { }
 
   horloge: string
   setHorloge = setInterval(() => this.horloge = new Date().toLocaleString(), 1000);

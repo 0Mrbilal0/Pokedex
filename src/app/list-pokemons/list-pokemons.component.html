@@ -1,0 +1,15 @@
+<!-- barre de recherche -->
+<div class="content">
+    <input type="text" (keyup.enter)="takePokemon(pokemonNameInput.value)" placeholder="Nom de pokemon" class="form-control" style="width: 800px; align-self: center;" #pokemonNameInput>
+</div>
+<!-- ------------------ -->
+
+<!-- content -->
+<div>
+    <h1>{{pokemonNameInput.value}}</h1>
+    <h1> {{ pokemonName || codeErreur }} </h1>
+</div>
+
+<!-- <img src="{{pokemonImg}}"> -->
+<!-- <input type="button" (click)="Soustraction()" value="-1"> -->
+<h1>{{horloge !== null ? horloge : "quelque chose"}}</h1>
