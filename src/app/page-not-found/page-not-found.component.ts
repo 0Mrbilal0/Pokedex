@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
     <p>Cette page n'existe pas !</p>
     <a routerLink="/pokemons"> Retour </a>
   </div>
-
   `,
   styles: [
   ]

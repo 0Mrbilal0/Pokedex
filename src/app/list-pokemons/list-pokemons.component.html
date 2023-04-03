@@ -1,15 +1,21 @@
-<!-- barre de recherche -->
-<div class="content">
-    <input type="text" (keyup.enter)="takePokemon(pokemonNameInput.value)" placeholder="Nom de pokemon" class="form-control" style="width: 800px; align-self: center;" #pokemonNameInput>
-</div>
-<!-- ------------------ -->
-
 <!-- content -->
-<div>
-    <h1>{{pokemonNameInput.value}}</h1>
-    <h1> {{ pokemonName || codeErreur }} </h1>
+<div id="content">
+    <div id="search">
+        <input type="text" (keyup.enter)="takePokemon(pokemonNameInput.value)" placeholder="Nom du pokemon" class="form-control" style="width: 800px;" #pokemonNameInput>
+    </div>
+    <div class="container" style="padding: 0px 30px 0px 30px;">
+        <div class="row">
+            <div *ngFor="let pokemon of pokemonList" class="col m4">
+                <p>{{pokemon.name}}</p>
+                <img src={{pokemon.url}} alt="Cassé">
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- <img src="{{pokemonImg}}"> -->
 <!-- <input type="button" (click)="Soustraction()" value="-1"> -->
-<h1>{{horloge !== null ? horloge : "quelque chose"}}</h1>
+
+<div id="footer">
+    <h1> {{horloge}} </h1>
+</div>

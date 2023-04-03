@@ -8,12 +8,12 @@ const P = new Pokedex();
 })
 
 export class ListPokemonsComponent implements OnInit {
-  constructor() { }
+  constructor(){ }
 
   horloge: string
   setHorloge = setInterval(() => this.horloge = new Date().toLocaleString(), 1000);
 
-  pokemonList: object
+  pokemonList: Pokedex.NamedAPIResource[]
   pokemonName: string
   pokemonImg: string|null
   pokemonHp: number
@@ -24,6 +24,15 @@ export class ListPokemonsComponent implements OnInit {
 
   ngOnInit(){
     console.log(`Initialisation ...`);
+    P.getPokemonsList().then(res => {
+      this.pokemonList = res.results
+    })
+  }
+
+  getPokemonInf(name: string) {
+    P.getPokemonByName(name).then(res => {
+      this.pokemonList
+    })
   }
 
   takePokemon(pokemonName: string){
