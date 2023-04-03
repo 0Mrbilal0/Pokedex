@@ -13,10 +13,16 @@
     right: 0px;
     margin-bottom: 0px;
     padding: 20px;
+    z-index: 999;
 }
 
 #search {
     margin: 0 auto;
     display: inline-block;
     text-align: center;
+}
+
+#content {
+    margin-bottom: auto;
+    z-index: 1;
 }
